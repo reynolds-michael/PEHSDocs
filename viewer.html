@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head><title>View PDF</title></head>
-  <body style="margin:0;padding:0;">
-    <script>
-      const file = new URLSearchParams(window.location.search).get('file');
-      const viewerUrl = 'pdfjs/web/viewer.html?file=' + encodeURIComponent('../' + file);
-      window.location.replace(viewerUrl);
-    </script>
-  </body>
+<head>
+  <title>View PDF</title>
+</head>
+<body style="margin:0; padding:0;">
+  <script>
+    const file = new URLSearchParams(window.location.search).get('file');
+    const viewerUrl = 'pdfjs/web/viewer.html?file=' + encodeURIComponent('../' + file);
+    window.location.replace(viewerUrl);
+  </script>
+</body>
 </html>
