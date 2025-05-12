@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>View Document</title>
-</head>
-<body style="margin:0; padding:0;">
-  <iframe id="pdfFrame" style="border:0; width:100%; height:100vh;" frameborder="0"></iframe>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const file = urlParams.get('file');
-    const encoded = encodeURIComponent("https://reynolds-michael.github.io/PEHSDocs/" + file);
-    document.getElementById('pdfFrame').src = "https://docs.google.com/gview?url=" + encoded + "&embedded=true";
-  </script>
-</body>
+  <head><title>Document Viewer</title></head>
+  <body style="margin:0;padding:0;">
+    <script>
+      const file = new URLSearchParams(window.location.search).get('file');
+      const url = 'pdfjs/web/viewer.html?file=' + encodeURIComponent(file);
+      location.replace(url);
+    </script>
+  </body>
 </html>
